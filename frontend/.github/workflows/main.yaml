@@ -17,7 +17,7 @@ jobs:
       uses: docker/setup-buildx-action@v1
       
     - name: Build Docker image
-      run: docker build -t backend .
+      run: docker build -t frontend .
       
     - name: Log in to Google Cloud
       uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
@@ -27,8 +27,8 @@ jobs:
 
     - name: Push Docker image to Google Container Registry
       run: |
-        docker tag flask-app gcr.io/<project-id>/backend:latest
-        docker push gcr.io/<project-id>/backend:latest
+        docker tag flask-app gcr.io/<project-id>/frontend:latest
+        docker push gcr.io/<project-id>/frontend:latest
 
     - name: Deploy to Cloud Run
-      run: gcloud run deploy frontend --image gcr.io/<project-id>/backend:latest --platform managed --region us-central1
+      run: gcloud run deploy frontend --image gcr.io/<project-id>/frontend:latest --platform managed --region us-central1
