@@ -7,7 +7,7 @@ app = Flask(__name__)
 CORS(app)
 
 # MySQL configurations
-app.config['MYSQL_HOST'] = '34.121.196.37'
+app.config['MYSQL_HOST'] = 'ip-addre'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = 'password'
 app.config['MYSQL_DB'] = 'test'
