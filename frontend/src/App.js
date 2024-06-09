@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 
 // TODO: point frontend to backend url
-const BACKEND_URL = "https://backend-gjmf37uzcq-uc.a.run.app/";
+const BACKEND_URL = "https://backend-gjmf37uzcq-uc.a.run.app";
 console.log('It is working')
 
 function App() {

@@ -20,7 +20,7 @@ jobs:
       run: docker build -t frontend .
       
     - name: Log in to Google Cloud
-      uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
+      uses: google-github-actions/setup-gcloud@v0.2.0
       with:
         service_account_key: ${{ secrets.GCP_SA_KEY }}
         project_id: <project-id>

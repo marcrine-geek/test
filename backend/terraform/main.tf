@@ -49,9 +49,17 @@ variable "region" {
 variable "service_name" {
   description = "The name of the Cloud Run service."
   type        = string
+  default     = "backend"
 }
 
 variable "container_image" {
   description = "The URL of the container image in a container registry."
   type        = string
+  default     = "us-central1-docker.pkg.dev/mytest-425707/backend/backend:latest"
+}
+
+variable "credentials_file" {
+  description = "The path to the service account key file."
+  type        = string
+  default     = "~/terraform-key.json"
 }
