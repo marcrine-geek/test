@@ -24,9 +24,11 @@ jobs:
       with:
         service_account_key: ${{ secrets.GCP_SA_KEY }}
         project_id: mytest-425707
+        export_default_credentials: true
 
     - name: Push Docker image to Google Container Registry
       run: |
+        gcloud auth configure-docker us-central1-docker.pkg.dev --quiet
         docker tag frontend us-central1-docker.pkg.dev/mytest-425707/frontend/frontend:latest
         docker push us-central1-docker.pkg.dev/mytest-425707/frontend/frontend:latest
 

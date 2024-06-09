@@ -17,7 +17,7 @@ function App() {
     })
       .then(response => response.json())
       .then(data => {
-        console.log('Success:', data);
+        console.log('Successfully post message:', data);
         fetchMessage(data.msg_id);
       })
       .catch((error) => {

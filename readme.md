@@ -72,4 +72,13 @@ Ensure you create necessary roles to enable terraform to create resources in the
 - For the CI/CD we will use github actions (Find the workflows in .github/workflows for both backend and frontend)
 - The workflow will update images and push the image to cloudrun for deployment
 
+- Below is the frontend CI/CD Pipeline in action
+
+![Registry](images/cicd.png)
+
+![Registry](images/citest.png)
+
+- Below is the Backend CI/CD Pipeline in action
+
+![Registry](images/cicdB.png)
 
